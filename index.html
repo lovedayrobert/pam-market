@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=980">
+<title>$PAM :: Policy Analysis Market :: FutureMAP Revival Terminal</title>
+<meta name="description" content="The Policy Analysis Market, relisted on-chain. A working play-money prediction market running on a Logarithmic Market Scoring Rule. Est. proposed 2001, cancelled 2003, revived by the crowd.">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23000'/%3E%3Ccircle cx='9' cy='16' r='6' fill='%232e78d2'/%3E%3Cpath d='M14 16 L30 8 L30 24 Z' fill='%23e8564a'/%3E%3C/svg%3E">
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ============================ HEADER / LOGO ==================== -->
+  <div class="banner">
+    <div class="stars" id="stars"></div>
+    <div class="beam"></div>
+    <div class="flash"></div>
+    <div class="earth"></div>
+    <svg class="sd-chart" viewBox="0 0 96 70" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="0" width="96" height="70" fill="#e9edf1"/>
+      <line x1="12" y1="6"  x2="12" y2="60" stroke="#333" stroke-width="1.5"/>
+      <line x1="12" y1="60" x2="90" y2="60" stroke="#333" stroke-width="1.5"/>
+      <path d="M16 14 C40 24 60 50 86 56" fill="none" stroke="#1560c8" stroke-width="2.4"/>
+      <path d="M16 56 C40 48 60 22 86 14" fill="none" stroke="#c8352a" stroke-width="2.4"/>
+      <circle cx="50" cy="35" r="2.6" fill="#111"/>
+      <text x="6" y="5" font-size="6" fill="#333" font-family="Arial">P</text>
+      <text x="88" y="68" font-size="6" fill="#333" font-family="Arial">Q</text>
+    </svg>
+    <div class="logo-letters">
+      <span class="pam-letter">P</span>
+      <span class="pam-letter">A</span>
+      <span class="pam-letter">M</span>
+    </div>
+  </div>
+  <div class="subtitle">POLICY&nbsp;&nbsp;ANALYSIS&nbsp;&nbsp;MARKET&nbsp;&nbsp;&nbsp;<span>[ $PAM ]</span></div>
+
+  <!-- ============================ CONTRACT ADDRESS =============== -->
+  <div class="ca-bar">
+    <span class="ca-label">&#9679; CONTRACT ADDRESS //</span>
+    <code id="caText">73Ldwtam8mZZALK4veHMDsnMBcsPJMQcapaYk8bHpump</code>
+    <button class="ca-copy" id="caCopy" type="button">COPY</button>
+    <a class="ca-x" href="https://x.com/i/communities/2037427340574429253" target="_blank" rel="noopener">JOIN X COMMUNITY &#8599;</a>
+  </div>
+
+  <!-- ============================ GOV META BAR ==================== -->
+  <div class="gov-bar">
+    <div>INFORMATION AWARENESS OFFICE &nbsp;//&nbsp; FutureMAP PROGRAM &nbsp;//&nbsp; UNCLASSIFIED&nbsp;<span class="blink">_</span></div>
+    <div class="ticker">$PAM <a href="https://dexscreener.com/solana/73Ldwtam8mZZALK4veHMDsnMBcsPJMQcapaYk8bHpump" target="_blank" rel="noopener" id="spot" style="color:inherit;text-decoration:none">--</a> <span id="chg"></span> &nbsp; MCAP <span id="mcap">--</span> &nbsp; <span id="clock"></span></div>
+  </div>
+
+  <!-- ============================ NAV ============================= -->
+  <div class="nav">
+    <a href="#" class="active" data-view="markets">MARKETS</a>
+    <a href="#" data-view="portfolio">MY POSITIONS</a>
+    <a href="#" data-view="about">THE LORE</a>
+    <a href="#" data-view="how">HOW IT WORKS</a>
+  </div>
+
+  <!-- ============================ MAIN ============================ -->
+  <div class="main">
+    <div class="content" id="content"><!-- views injected here --></div>
+
+    <!-- ---- SIDEBAR ---- -->
+    <div class="side">
+      <div class="acct">
+        <div style="font-size:9px;color:#7fb5ff;letter-spacing:.1em">TRADER TERMINAL</div>
+        <div class="bal"><span id="sideBal">10,000</span></div>
+        <div style="font-size:9px;color:#7fb5ff;margin-top:-4px">$PAM CREDITS</div>
+        <div class="row"><span>Open positions</span><b id="sidePos">0.00</b></div>
+        <div class="row"><span>Net worth</span><b id="sideNet">10,000</b></div>
+      </div>
+
+      <h3>&#9642; LIVE TAPE</h3>
+      <ul class="ticker-list" id="tape"><li>Awaiting order flow...</li></ul>
+
+      <h3>&#9642; VISITOR NO.</h3>
+      <div class="hitcounter" id="hits">0000000</div>
+
+      <h3>&#9642; CERTIFIED</h3>
+      <div class="badges">
+        <div class="badge88" style="background:linear-gradient(90deg,#1560c8,#0a1730)">BEST VIEWED IN<br>800 &times; 600</div>
+        <div class="badge88" style="background:linear-gradient(90deg,#1f9d4d,#0c3a1e)">POWERED BY<br>THE CROWD</div>
+        <div class="badge88" style="background:linear-gradient(90deg,#7a45c0,#2a1546)">LMSR MARKET<br>MAKER v1.0</div>
+      </div>
+
+      <h3 style="margin-top:12px">&#9642; ADMIN</h3>
+      <button class="btn" id="resetBtn" style="width:100%">&#8635; RESET TERMINAL</button>
+    </div>
+  </div>
+
+  <!-- ============================ FOOTER ========================== -->
+  <div class="footer">
+    <div class="big">POLICY ANALYSIS MARKET &nbsp;//&nbsp; A FUTUREMAP REVIVAL</div>
+    <div style="margin:6px 0">
+      <a href="https://x.com/i/communities/2037427340574429253" target="_blank" rel="noopener">JOIN THE X COMMUNITY</a> &nbsp;&middot;&nbsp;
+      <a href="https://dexscreener.com/solana/73Ldwtam8mZZALK4veHMDsnMBcsPJMQcapaYk8bHpump" target="_blank" rel="noopener">TRADE $PAM ON DEXSCREENER</a><br>
+      CA: <span style="font-family:'Courier New',monospace;color:#7fff9a">73Ldwtam8mZZALK4veHMDsnMBcsPJMQcapaYk8bHpump</span>
+    </div>
+    Proposed May 2001 &middot; Cancelled August 2003 &middot; Revived on-chain by the wisdom of crowds.<br>
+    This is a play-money simulation for entertainment and historical curiosity. No real currency, securities, or assets change hands.
+    $PAM is a memecoin tribute, not an investment. Not affiliated with DARPA, the IAO, or the US Government. Not financial advice.<br>
+    Declassified reading:
+    <a href="https://en.wikipedia.org/wiki/Policy_Analysis_Market" target="_blank" rel="noopener">Policy Analysis Market (Wikipedia)</a> &middot;
+    <a href="https://www.cia.gov/resources/csi/static/Prediction-Markets-Enhance-Intel.pdf" target="_blank" rel="noopener">Yeh, "Using Prediction Markets to Enhance US Intelligence Capabilities," Studies in Intelligence</a> &middot;
+    <a href="https://mason.gmu.edu/~rhanson/PAM.html" target="_blank" rel="noopener">Robin Hanson on PAM</a> &middot;
+    <a href="https://unlimitedhangout.com/2026/06/investigative-series/the-secret-history-of-polymarket-part-1/" target="_blank" rel="noopener">"The Secret History of Polymarket," Unlimited Hangout</a>
+    <br><br>&copy; 2003&ndash;<span id="yr"></span> POLICY ANALYSIS MARKET. THE FUTURE IS A TRADEABLE ASSET.
+  </div>
+
+</div>
+
+<!-- ============================ TRADE MODAL ====================== -->
+<div class="modal-back" id="modalBack">
+  <div class="modal">
+    <div class="title"><span id="mTitle">TRADE TICKET</span><span class="x" id="mClose">&times;</span></div>
+    <div class="mbody">
+      <div style="font-size:11px;margin-bottom:8px" id="mQ"></div>
+      <div class="field">
+        <label id="mOutLbl">OUTCOME</label>
+        <div class="presets">
+          <button class="btn buy" data-side="buy">&#9650; BUY / LONG</button>
+          <button class="btn sell" data-side="sell">&#9660; SELL / SHORT</button>
+        </div>
+      </div>
+      <div class="field">
+        <label>SHARES <span style="font-weight:normal;color:#667">(each pays 1 $PAM if it resolves true)</span></label>
+        <input type="number" id="mShares" value="100" min="1" step="1">
+        <input type="range" class="slider" id="mSlider" min="1" max="1000" value="100">
+      </div>
+      <div class="quote" id="mQuote"></div>
+      <button class="btn big gold" id="mConfirm" style="width:100%">CONFIRM ORDER</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="market.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
